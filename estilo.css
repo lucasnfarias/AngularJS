@@ -1,0 +1,57 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+@font-face {
+	font-family: 'FonteLogo';
+    src: url("_fonts/bubblegum-sans-regular.otf");}
+    
+body {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    background-color: bisque;
+    width: 800px;
+    margin: auto;
+}
+
+#bloco2 {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    background-color: rgba(201, 197, 197, 0.6);
+    box-shadow: 2px 2px 2px grey;
+    padding: 10px;
+}
+
+h2 {
+    color: brown;
+    font-family: 'FonteLogo', sans-serif;
+    font-size: 100px;
+    text-shadow: 2px 1px 1px black;
+    margin: 2px auto 10px auto;
+}
+
+.items {
+    font-family: 'Titillium Web', sans-serif;
+    background-color: brown;
+    color: bisque;
+    padding: 3px;
+    border: 2px grey;
+    box-shadow: 2px 2px 2px black;
+}
+
+span {
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: bold;
+    color: rgb(252, 252, 252);
+}
+
+.done-true {
+    text-decoration: line-through;
+    color: grey;
+}
+
+ul li {
+    list-style: none;
+}

@@ -1,0 +1,40 @@
+<!doctype html>
+<html ng-app='todoApp'>
+<head>
+    <title>To-do App</title>
+    <meta charset="utf-8">
+    <script src="https://code.angularjs.org/snapshot/angular.min.js"></script>
+    <link rel="stylesheet" href="estilo.css"/>
+</head>
+<body>
+    <h2>To-Do App</h2>
+    <div id="bloco2" ng-controller='todoList'>
+        <span class="items">Items: {{todos.length}}</span>
+        <ul>
+            <li ng-repeat="todo in todos">
+                <label class="checkbox">
+                    <input type="checkbox" ng-model="todo.done"></input>
+                    <span class="done-{{todo.done}}">{{todo.text}}</span>
+                </label>
+            </li>
+        </ul>
+        <form ng-submit="addTodo()">
+            <input type="text" ng-model="todoText" size="25" placeholder="Add New To-Do Here">
+            <input type="submit" value="Add">
+        </form>
+    </div>
+    <script>
+        var app = angular.module('todoApp', []).controller('todoList', function($scope) {
+            $scope.todos = [ {text: 'Learn about AngularJS', done: true}, 
+                {text:'Search about monkey astronauts!', done: false}];
+    
+            $scope.addTodo = function() {
+                if($scope.todoText !== '' && $scope.todoText !== 'Add New To-Do Here') {
+                        $scope.todos.push({text: $scope.todoText, done: false});
+                        $scope.todoText = '';
+                }
+            };
+        });
+    </script>
+</body>
+</html>
